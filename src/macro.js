@@ -27,7 +27,7 @@ function reactIntlMacro({
   const calleeName = defineMessages[0].parentPath.get('callee').node.name;
   importReactIntl(state, t, calleeName);
 
-  // Node: Output side-effects
+  // Note: Output side-effect
   if (MESSAGE_DIR) {
     const result = defineMessages.map(getMessages);
     const sourceRelativedDir = path.relative(process.cwd(), filename);
