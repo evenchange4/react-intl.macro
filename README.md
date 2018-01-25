@@ -44,7 +44,9 @@ const messages = defineMessages({
 });
 ```
 
-### Extract with Create React App
+### Extract CLI
+
+#### Create React App
 
 ```diff
 // package.json
@@ -52,6 +54,16 @@ const messages = defineMessages({
   "start": "react-scripts start",
   "build": "react-scripts build",
 + "extract": "MESSAGE_DIR='./.messages' react-scripts build"
+},
+```
+
+#### Next.js
+
+```diff
+"scripts": {
+  "dev": "next",
+  "build": "next build",
++ "extract": "MESSAGE_DIR='./.messages' next build"
 },
 ```
 
