@@ -6,7 +6,6 @@
 [![Codecov Status][codecov-badge]][codecov]
 [![npm package][npm-badge]][npm]
 [![npm downloads][npm-downloads]][npm]
-[![node][node]]()
 
 [![Dependency Status][dependency-badge]][dependency]
 [![devDependency Status][devdependency-badge]][devdependency]
@@ -106,7 +105,6 @@ MIT: [http://michaelhsu.mit-license.org](http://michaelhsu.mit-license.org)
 [npm]: https://www.npmjs.org/package/react-intl.macro
 [codecov-badge]: https://img.shields.io/codecov/c/github/evenchange4/react-intl.macro.svg?style=flat-square
 [codecov]: https://codecov.io/github/evenchange4/react-intl.macro?branch=master
-[node]: https://img.shields.io/node/v/react-intl.macro.svg?style=flat-square
 [npm-downloads]: https://img.shields.io/npm/dt/react-intl.macro.svg?style=flat-square
 [license-badge]: https://img.shields.io/npm/l/react-intl.macro.svg?style=flat-square
 [license]: http://michaelhsu.mit-license.org/
