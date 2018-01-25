@@ -26,14 +26,11 @@ const messages = def({
   }
 });
 export default messages;
-{
-  "filename": "/Users/mtk07866/code/GitHub/react-intl.macro/.messages/src/__tests__/macro.test.json",
-  "data": [{
-    "id": "Component.greet",
-    "defaultMessage": "Hello, {name}!",
-    "description": "Greeting to welcome the user to the app"
-  }]
-}
+[{
+  "id": "Component.greet",
+  "defaultMessage": "Hello, {name}!",
+  "description": "Greeting to welcome the user to the app"
+}]
 
 `;
 
@@ -63,14 +60,11 @@ const messages = defineMessages({
   }
 });
 export default messages;
-{
-  "filename": "/Users/mtk07866/code/GitHub/react-intl.macro/.messages/src/__tests__/macro.test.json",
-  "data": [{
-    "id": "Component.greet",
-    "defaultMessage": "Hello, {name}!",
-    "description": "Greeting to welcome the user to the app"
-  }]
-}
+[{
+  "id": "Component.greet",
+  "defaultMessage": "Hello, {name}!",
+  "description": "Greeting to welcome the user to the app"
+}]
 
 `;
 
@@ -99,14 +93,11 @@ const messages = defineMessages({
   }
 });
 export default messages;
-{
-  "filename": "/Users/mtk07866/code/GitHub/react-intl.macro/.messages/src/__tests__/macro.test.json",
-  "data": [{
-    "id": "Component.greet",
-    "defaultMessage": "Hello, {name}!",
-    "description": "Greeting to welcome the user to the app"
-  }]
-}
+[{
+  "id": "Component.greet",
+  "defaultMessage": "Hello, {name}!",
+  "description": "Greeting to welcome the user to the app"
+}]
 
 `;
 
@@ -145,18 +136,15 @@ const messages = defineMessages({
   }
 });
 export default messages;
-{
-  "filename": "/Users/mtk07866/code/GitHub/react-intl.macro/.messages/src/__tests__/macro.test.json",
-  "data": [{
-    "id": "Component.greet",
-    "defaultMessage": "Hello, {name}!",
-    "description": "Greeting to welcome the user to the app"
-  }, {
-    "id": "Component.greet2",
-    "defaultMessage": "Hello, {name}!",
-    "description": "Greeting to welcome the user to the app"
-  }]
-}
+[{
+  "id": "Component.greet",
+  "defaultMessage": "Hello, {name}!",
+  "description": "Greeting to welcome the user to the app"
+}, {
+  "id": "Component.greet2",
+  "defaultMessage": "Hello, {name}!",
+  "description": "Greeting to welcome the user to the app"
+}]
 
 `;
 
@@ -197,17 +185,14 @@ export const message2 = defineMessages({
     description: 'Greeting to welcome the user to the app'
   }
 });
-{
-  "filename": "/Users/mtk07866/code/GitHub/react-intl.macro/.messages/src/__tests__/macro.test.json",
-  "data": [{
-    "id": "Component.greet2",
-    "defaultMessage": "Hello, {name}!",
-    "description": "Greeting to welcome the user to the app"
-  }, {
-    "id": "Component.greet",
-    "defaultMessage": "Hello, {name}!",
-    "description": "Greeting to welcome the user to the app"
-  }]
-}
+[{
+  "id": "Component.greet2",
+  "defaultMessage": "Hello, {name}!",
+  "description": "Greeting to welcome the user to the app"
+}, {
+  "id": "Component.greet",
+  "defaultMessage": "Hello, {name}!",
+  "description": "Greeting to welcome the user to the app"
+}]
 
 `;

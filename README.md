@@ -63,6 +63,7 @@ const messages = defineMessages({
 ## Alternative
 
 * https://github.com/yahoo/babel-plugin-react-intl
+* https://github.com/evenchange4/react-intl-cra
 
 ## Development
 
