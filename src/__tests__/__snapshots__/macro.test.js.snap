@@ -1,0 +1,213 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`macros callee alias: callee alias 1`] = `
+
+import { injectIntl } from 'react-intl';
+import { defineMessages as def } from 'react-intl.macro';
+
+const messages = def({
+  'Component.greet': {
+    id: 'Component.greet',
+    defaultMessage: 'Hello, {name}!',
+    description: 'Greeting to welcome the user to the app',
+  },
+});
+
+export default messages;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import { injectIntl, defineMessages as def } from 'react-intl';
+const messages = def({
+  'Component.greet': {
+    id: 'Component.greet',
+    defaultMessage: 'Hello, {name}!',
+    description: 'Greeting to welcome the user to the app'
+  }
+});
+export default messages;
+{
+  "filename": "/Users/mtk07866/code/GitHub/react-intl.macro/.messages/src/__tests__/macro.test.json",
+  "data": [{
+    "id": "Component.greet",
+    "defaultMessage": "Hello, {name}!",
+    "description": "Greeting to welcome the user to the app"
+  }]
+}
+
+`;
+
+exports[`macros it should only import react-intl once: it should only import react-intl once 1`] = `
+
+import { injectIntl } from 'react-intl';
+import { defineMessages } from 'react-intl.macro';
+
+const messages = defineMessages({
+  'Component.greet': {
+    id: 'Component.greet',
+    defaultMessage: 'Hello, {name}!',
+    description: 'Greeting to welcome the user to the app',
+  },
+});
+
+export default messages;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import { injectIntl, defineMessages } from 'react-intl';
+const messages = defineMessages({
+  'Component.greet': {
+    id: 'Component.greet',
+    defaultMessage: 'Hello, {name}!',
+    description: 'Greeting to welcome the user to the app'
+  }
+});
+export default messages;
+{
+  "filename": "/Users/mtk07866/code/GitHub/react-intl.macro/.messages/src/__tests__/macro.test.json",
+  "data": [{
+    "id": "Component.greet",
+    "defaultMessage": "Hello, {name}!",
+    "description": "Greeting to welcome the user to the app"
+  }]
+}
+
+`;
+
+exports[`macros one X one: one X one 1`] = `
+
+import { defineMessages } from 'react-intl.macro';
+
+const messages = defineMessages({
+  'Component.greet': {
+    id: 'Component.greet',
+    defaultMessage: 'Hello, {name}!',
+    description: 'Greeting to welcome the user to the app',
+  },
+});
+
+export default messages;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import { defineMessages } from "react-intl";
+const messages = defineMessages({
+  'Component.greet': {
+    id: 'Component.greet',
+    defaultMessage: 'Hello, {name}!',
+    description: 'Greeting to welcome the user to the app'
+  }
+});
+export default messages;
+{
+  "filename": "/Users/mtk07866/code/GitHub/react-intl.macro/.messages/src/__tests__/macro.test.json",
+  "data": [{
+    "id": "Component.greet",
+    "defaultMessage": "Hello, {name}!",
+    "description": "Greeting to welcome the user to the app"
+  }]
+}
+
+`;
+
+exports[`macros one X two: one X two 1`] = `
+
+import { defineMessages } from 'react-intl.macro';
+
+const messages = defineMessages({
+  'Component.greet': {
+    id: 'Component.greet',
+    defaultMessage: 'Hello, {name}!',
+    description: 'Greeting to welcome the user to the app',
+  },
+  'Component.greet2': {
+    id: 'Component.greet2',
+    defaultMessage: 'Hello, {name}!',
+    description: 'Greeting to welcome the user to the app',
+  },
+});
+
+export default messages;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import { defineMessages } from "react-intl";
+const messages = defineMessages({
+  'Component.greet': {
+    id: 'Component.greet',
+    defaultMessage: 'Hello, {name}!',
+    description: 'Greeting to welcome the user to the app'
+  },
+  'Component.greet2': {
+    id: 'Component.greet2',
+    defaultMessage: 'Hello, {name}!',
+    description: 'Greeting to welcome the user to the app'
+  }
+});
+export default messages;
+{
+  "filename": "/Users/mtk07866/code/GitHub/react-intl.macro/.messages/src/__tests__/macro.test.json",
+  "data": [{
+    "id": "Component.greet",
+    "defaultMessage": "Hello, {name}!",
+    "description": "Greeting to welcome the user to the app"
+  }, {
+    "id": "Component.greet2",
+    "defaultMessage": "Hello, {name}!",
+    "description": "Greeting to welcome the user to the app"
+  }]
+}
+
+`;
+
+exports[`macros two X one: two X one 1`] = `
+
+import { defineMessages } from 'react-intl.macro';
+
+export const message1 = defineMessages({
+  'Component.greet2': {
+    id: 'Component.greet2',
+    defaultMessage: 'Hello, {name}!',
+    description: 'Greeting to welcome the user to the app',
+  },
+});
+
+export const message2 = defineMessages({
+  'Component.greet': {
+    id: 'Component.greet',
+    defaultMessage: 'Hello, {name}!',
+    description: 'Greeting to welcome the user to the app',
+  },
+});
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import { defineMessages } from "react-intl";
+export const message1 = defineMessages({
+  'Component.greet2': {
+    id: 'Component.greet2',
+    defaultMessage: 'Hello, {name}!',
+    description: 'Greeting to welcome the user to the app'
+  }
+});
+export const message2 = defineMessages({
+  'Component.greet': {
+    id: 'Component.greet',
+    defaultMessage: 'Hello, {name}!',
+    description: 'Greeting to welcome the user to the app'
+  }
+});
+{
+  "filename": "/Users/mtk07866/code/GitHub/react-intl.macro/.messages/src/__tests__/macro.test.json",
+  "data": [{
+    "id": "Component.greet2",
+    "defaultMessage": "Hello, {name}!",
+    "description": "Greeting to welcome the user to the app"
+  }, {
+    "id": "Component.greet",
+    "defaultMessage": "Hello, {name}!",
+    "description": "Greeting to welcome the user to the app"
+  }]
+}
+
+`;
