@@ -1,6 +1,6 @@
 {
   "name": "react-intl.macro",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Run react-intl at build-time with babel-plugin-macros.",
   "author": "Michael Hsu <evenchange4@gmail.com>",
   "license": "MIT",
