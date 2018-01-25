@@ -1,5 +1,12 @@
 ## Change Log
 
+### v0.2.2 (2018/01/25 15:09 +00:00)
+
+* [1fd2c49](https://github.com/evenchange4/react-intl.macro/commit/1fd2c49655e6b52c129941b00208b89f43093825) 0.2.2 (@evenchange4)
+* [487e8f1](https://github.com/evenchange4/react-intl.macro/commit/487e8f19b980fb2474133db89ce3167187fb9e1e) fix(dependency): pinOnlyDevDependencies (@evenchange4)
+* [3ee46bc](https://github.com/evenchange4/react-intl.macro/commit/3ee46bcf0895ddd4a4e030d1b755105b207a2e73) docs(README): add next.js example (@evenchange4)
+* [c9dd120](https://github.com/evenchange4/react-intl.macro/commit/c9dd120266d34b7266529258a4825227fec31785) docs(CHANGELOG): release 0.2.1 (@evenchange4)
+
 ### v0.2.1 (2018/01/25 05:09 +00:00)
 
 * [6c6ace6](https://github.com/evenchange4/react-intl.macro/commit/6c6ace69ac6448bcd0ecb818aa4ddc00ef4ceba6) 0.2.1 (@evenchange4)
