@@ -4,16 +4,18 @@ import path from 'path';
 import { createMacro } from 'babel-plugin-macros';
 import * as R from 'ramda';
 import type { Babel, BabelPluginPass, BabelPath } from 'babel-flow-types';
-import importReactIntl from './utils/importReactIntl';
-import writeFileSync from './utils/writeFileSync';
-import getMessages from './utils/getMessages';
+import { importReactIntl, writeFileSync, getMessages } from './utils/index';
 // import printAST from 'ast-pretty-print';
 // console.log(printAST(referencePath.parentPath));
 
 function reactIntlMacro({
   references,
   state,
-  state: { file: { opts: { filename } } },
+  state: {
+    file: {
+      opts: { filename },
+    },
+  },
   babel: { types: t },
 }: {
   references: { defineMessages: Array<BabelPath> },
