@@ -1,11 +1,11 @@
 sudo: false
 language: node_js
 node_js:
-  - "9.4.0"
+  - '11.8.0'
 
 env:
   global:
-    - YARN_VERSION=1.3.2
+    - YARN_VERSION=1.13.0
 
 before_install:
   - export PATH="$HOME/.yarn/bin:$PATH"
@@ -14,10 +14,13 @@ before_install:
       curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version $YARN_VERSION
     fi
 
+install:
+  - yarn install --pure-lockfile
+
 script:
   - yarn run eslint
-  - yarn run flow
   - yarn run test
+  - yarn run flow-coverage
   - yarn run build
 
 after_success:
@@ -27,7 +30,7 @@ deploy:
   - provider: npm
     email: evenchange4@gmail.com
     api_key:
-      secure: IkPYUpobh+lSj9h7HnveYlxn7+7o55fVgAs411Z96ks8KNOJjrxcSv2faF+s7GsqGZDw2HdRnGS6/GTP1xL1dpBfH9kueX2ZpwF7JHKLjzrLhAuC/amAi5YPZLR7bMHYzKXBGQl1l8HL64MYVP6yOOxVGrprpxPpNuXXfa2AzNPiT2FOujmRf61G9qV2HhrFwz/Bt83piDqcyiVHSlNnWtmaVCi4R2d+LXivqnW7rPS1uKdo5LdvXZYZP0r4FDqVKxr+2BIXb46xj7TOe+m6DtXeclsfIaSM46kkMNCOoL7Ec4KP65zkZjT74iFPTQXi36+Wj/UXfdZaokS0uwNcD94gjODoeT4DEUvwSxn7gwFbNPV6QHZ/8yayxBQ3O1BUc6JLny8m2arfaIkEnSufS+FsJWuwoVYNMJH3czbHU5dUTE4O7Ht2CImCDP8SK0kZQGETn/70UYtUJBR8nCcC/ARDQC1nKlPqbjI4WJ1r/cGMC5PSyAV9dVUVXJbjy1cnZ7QiUaJD0Dthjl+dqFeiptnwU4M6j20kqfxL/PPzl1zEaoh1+ECS++hbnqzzPwwF7rneGTM8R1PKPtVHfxtGNX+I8KXbml3OzUMbWwHE5hbOtvtO5UycpcSNjrL9LfB9PyC8CLWkTHvnjHBgNU1kCEl0JhqV2mCLbNLsMh6uxWE=
+      secure: ''
     skip_cleanup: true
     on:
       tags: true
@@ -36,8 +39,9 @@ deploy:
 cache:
   yarn: true
   directories:
-    - "~/.yarn"
+    - '~/.yarn'
     - node_modules
 
 notifications:
-  email: evenchange4@gmail.com
+  email:
+    - evenchange4@gmail.com

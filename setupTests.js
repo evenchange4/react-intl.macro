@@ -1,3 +1,4 @@
+// @flow
 /* eslint global-require: 0 */
 /**
  * Note: mock for output file
