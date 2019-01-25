@@ -1,13 +1,20 @@
 ## Unreleased (2019-01-25)
 
+## <small>0.2.4 (2019-01-25)</small>
+
+- 0.2.4 ([961ccf5](https://github.com/evenchange4/react-intl.macro/commit/961ccf5))
+- fix(deps): move babel-flow-types to deps ([91f46fb](https://github.com/evenchange4/react-intl.macro/commit/91f46fb))
+
 ## <small>0.2.3 (2019-01-25)</small>
 
+- chore(deps): update dependency eslint-plugin-flowtype to v2.42.0 (#3) ([35c02d7](https://github.com/evenchange4/react-intl.macro/commit/35c02d7)), closes [#3](https://github.com/evenchange4/react-intl.macro/issues/3)
+- chore(deps): update dependency lint-staged to v6.1.0 (#4) ([e9a535a](https://github.com/evenchange4/react-intl.macro/commit/e9a535a)), closes [#4](https://github.com/evenchange4/react-intl.macro/issues/4)
+- chore(travis): update npm release key ([1ed1ab4](https://github.com/evenchange4/react-intl.macro/commit/1ed1ab4))
+- docs(CHANGELOG): release 0.2.2 ([ea827b8](https://github.com/evenchange4/react-intl.macro/commit/ea827b8))
+- docs(CHANGELOG): release 0.2.3 ([3721486](https://github.com/evenchange4/react-intl.macro/commit/3721486))
 - 0.2.3 ([a86d153](https://github.com/evenchange4/react-intl.macro/commit/a86d153))
 - refactor(deps): make npm and scripts up-to-date (#28) ([c5a009d](https://github.com/evenchange4/react-intl.macro/commit/c5a009d)), closes [#28](https://github.com/evenchange4/react-intl.macro/issues/28)
 - refactor(writeFileSync): use fs-extra (#29) ([4a1926b](https://github.com/evenchange4/react-intl.macro/commit/4a1926b)), closes [#29](https://github.com/evenchange4/react-intl.macro/issues/29)
-- chore(deps): update dependency eslint-plugin-flowtype to v2.42.0 (#3) ([35c02d7](https://github.com/evenchange4/react-intl.macro/commit/35c02d7)), closes [#3](https://github.com/evenchange4/react-intl.macro/issues/3)
-- chore(deps): update dependency lint-staged to v6.1.0 (#4) ([e9a535a](https://github.com/evenchange4/react-intl.macro/commit/e9a535a)), closes [#4](https://github.com/evenchange4/react-intl.macro/issues/4)
-- docs(CHANGELOG): release 0.2.2 ([ea827b8](https://github.com/evenchange4/react-intl.macro/commit/ea827b8))
 
 ## <small>0.2.2 (2018-01-25)</small>
 
