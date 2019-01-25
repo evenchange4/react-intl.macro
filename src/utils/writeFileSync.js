@@ -1,7 +1,6 @@
 // @flow
-import fs from 'fs';
+import fs from 'fs-extra';
 import path from 'path';
-import { spawnSync } from 'child_process';
 
 export default function writeFileSync(
   {
@@ -18,6 +17,6 @@ export default function writeFileSync(
   // state for test snapshot only
   state: any, // eslint-disable-line
 ) {
-  spawnSync('mkdir', ['-p', path.dirname(filename)]);
-  fs.writeFileSync(filename, JSON.stringify(data, null, 2));
+  fs.ensureDirSync(path.dirname(filename));
+  fs.writeJsonSync(filename, data);
 }
