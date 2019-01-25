@@ -1,9 +1,13 @@
-/* eslint no-console: 0 */
 // @flow
+/* eslint no-console: 0 */
 import path from 'path';
 import { createMacro } from 'babel-plugin-macros';
 import * as R from 'ramda';
-import type { Babel, BabelPluginPass, BabelPath } from 'babel-flow-types';
+import {
+  type Babel,
+  type BabelPluginPass,
+  type BabelPath,
+} from 'babel-flow-types';
 import { importReactIntl, writeFileSync, getMessages } from './utils/index';
 // import printAST from 'ast-pretty-print';
 // console.log(printAST(referencePath.parentPath));
