@@ -1068,7 +1068,7 @@ babel-eslint@^10.0.1:
     eslint-scope "3.7.1"
     eslint-visitor-keys "^1.0.0"
 
-babel-flow-types@1.2.3:
+babel-flow-types@^1.2.3:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/babel-flow-types/-/babel-flow-types-1.2.3.tgz#e9c94ac1063a8857f8b2a67c2e17eb6cccd519e3"
   integrity sha1-6clKwQY6iFf4sqZ8LhfrbMzVGeM=
