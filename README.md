@@ -18,6 +18,8 @@ $ yarn add react-intl.macro
 
 _Note: You'll need to install and configure [babel-plugin-macros](https://github.com/kentcdodds/babel-plugin-macros) if you haven't already._
 
+> React-intl@2 should be installed in your project.
+
 ## Example
 
 [evenchange4/react-intl.macro-example (with react-script@2.x)](https://github.com/evenchange4/react-intl.macro-example) [[DEMO](https://react-intlmacro.netlify.com/)]
@@ -65,7 +67,7 @@ const messages = defineMessages({
 
 ## API
 
-- `MESSAGE_DIR`
+- `MESSAGE_DIR: string`: The directory of output json files.
 
 ## Alternative
 
