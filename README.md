@@ -42,6 +42,48 @@ const messages = defineMessages({
 });
 ```
 
+```diff
+// Component.js
+import * as React from 'react';
+-import { defineMessages, FormattedMessage, FormattedHTMLMessage } from 'react-intl';
++import { defineMessages, FormattedMessage, FormattedHTMLMessage } from 'react-intl.macro';
+
+const messages = defineMessages({
+  'Component.greet': {
+    id: 'defineMessages.greet',
+    defaultMessage: 'Hello, {name}!',
+    description: 'Greeting to welcome the user to the app',
+  },
+});
+
+class Foo extends React.Component {
+  render() {
+    return (
+      <React.Fragment>
+        <FormattedMessage
+          id="Foo.hello1"
+          defaultMessage='Hello, {name}!'
+          description='Greeting to welcome the user to the app'
+        />
+        <FormattedMessage
+          id="Foo.hello2"
+          defaultMessage='Hello, {name}!'
+          description='Greeting to welcome the user to the app'
+        />
+      </React.Fragment>
+    );
+  }
+}
+
+const Component = () => (
+  <FormattedHTMLMessage
+    id="FormattedHTMLMessage.hello"
+    defaultMessage='<div>Hello, {name}!</div>'
+    description='Greeting to welcome the user to the app'
+  />
+)
+```
+
 ### Extract CLI
 
 #### Create React App

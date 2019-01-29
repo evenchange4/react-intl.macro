@@ -1,6 +1,260 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`macros callee alias: callee alias 1`] = `
+exports[`macros [FormattedHTMLMessage]: [FormattedHTMLMessage] 1`] = `
+
+import * as React from 'react';
+import { FormattedHTMLMessage } from 'react-intl.macro';
+
+export default class Foo extends React.Component {
+  render() {
+    return (
+      <FormattedHTMLMessage
+        id="FormattedHTMLMessage.hello"
+        defaultMessage='<div>Hello, {name}!</div>'
+        description='Greeting to welcome the user to the app'
+      />
+    );
+  }
+}
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import { FormattedHTMLMessage } from "react-intl";
+import * as React from 'react';
+export default class Foo extends React.Component {
+  render() {
+    return <FormattedHTMLMessage id="FormattedHTMLMessage.hello" defaultMessage='<div>Hello, {name}!</div>' description='Greeting to welcome the user to the app' />;
+  }
+
+}
+[{
+  "id": "FormattedHTMLMessage.hello",
+  "defaultMessage": "<div>Hello, {name}!</div>",
+  "description": "Greeting to welcome the user to the app"
+}]
+
+`;
+
+exports[`macros [FormattedMessage] one X one: [FormattedMessage] one X one 1`] = `
+
+import * as React from 'react';
+import { FormattedMessage } from 'react-intl.macro';
+
+export default class Foo extends React.Component {
+  render() {
+    return (
+      <FormattedMessage
+        id="Foo.hello"
+        defaultMessage='Hello, {name}!'
+        description='Greeting to welcome the user to the app'
+      />
+    );
+  }
+}
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import { FormattedMessage } from "react-intl";
+import * as React from 'react';
+export default class Foo extends React.Component {
+  render() {
+    return <FormattedMessage id="Foo.hello" defaultMessage='Hello, {name}!' description='Greeting to welcome the user to the app' />;
+  }
+
+}
+[{
+  "id": "Foo.hello",
+  "defaultMessage": "Hello, {name}!",
+  "description": "Greeting to welcome the user to the app"
+}]
+
+`;
+
+exports[`macros [FormattedMessage] one X two: [FormattedMessage] one X two 1`] = `
+
+import * as React from 'react';
+import { FormattedMessage } from 'react-intl.macro';
+
+export default class Foo extends React.Component {
+  render() {
+    return (
+      <React.Fragment>
+        <FormattedMessage
+          id="Foo.hello1"
+          defaultMessage='Hello, {name}!'
+          description='Greeting to welcome the user to the app'
+        />
+        <FormattedMessage
+          id="Foo.hello2"
+          defaultMessage='Hello, {name}!'
+          description='Greeting to welcome the user to the app'
+        />
+      </React.Fragment>
+    );
+  }
+}
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import { FormattedMessage } from "react-intl";
+import * as React from 'react';
+export default class Foo extends React.Component {
+  render() {
+    return <React.Fragment>
+        <FormattedMessage id="Foo.hello1" defaultMessage='Hello, {name}!' description='Greeting to welcome the user to the app' />
+        <FormattedMessage id="Foo.hello2" defaultMessage='Hello, {name}!' description='Greeting to welcome the user to the app' />
+      </React.Fragment>;
+  }
+
+}
+[{
+  "id": "Foo.hello1",
+  "defaultMessage": "Hello, {name}!",
+  "description": "Greeting to welcome the user to the app"
+}, {
+  "id": "Foo.hello2",
+  "defaultMessage": "Hello, {name}!",
+  "description": "Greeting to welcome the user to the app"
+}]
+
+`;
+
+exports[`macros [FormattedMessage] two X one: [FormattedMessage] two X one 1`] = `
+
+import * as React from 'react';
+import { FormattedMessage } from 'react-intl.macro';
+
+class Foo extends React.Component {
+  render() {
+    return (
+      <FormattedMessage
+        id="Foo.hello"
+        defaultMessage='Hello, {name}!'
+        description='Greeting to welcome the user to the app'
+      />
+    );
+  }
+}
+
+const Component = () => (
+  <FormattedMessage
+    id="Component.hello"
+    defaultMessage='Hello, {name}!'
+    description='Greeting to welcome the user to the app'
+  />
+)
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import { FormattedMessage } from "react-intl";
+import * as React from 'react';
+
+class Foo extends React.Component {
+  render() {
+    return <FormattedMessage id="Foo.hello" defaultMessage='Hello, {name}!' description='Greeting to welcome the user to the app' />;
+  }
+
+}
+
+const Component = () => <FormattedMessage id="Component.hello" defaultMessage='Hello, {name}!' description='Greeting to welcome the user to the app' />;
+
+[{
+  "id": "Foo.hello",
+  "defaultMessage": "Hello, {name}!",
+  "description": "Greeting to welcome the user to the app"
+}, {
+  "id": "Component.hello",
+  "defaultMessage": "Hello, {name}!",
+  "description": "Greeting to welcome the user to the app"
+}]
+
+`;
+
+exports[`macros [defineMessages, FormattedMessage, FormattedHTMLMessage]: [defineMessages, FormattedMessage, FormattedHTMLMessage] 1`] = `
+
+import * as React from 'react';
+import { defineMessages, FormattedMessage, FormattedHTMLMessage } from 'react-intl.macro';
+
+const messages = defineMessages({
+  'Component.greet': {
+    id: 'defineMessages.greet',
+    defaultMessage: 'Hello, {name}!',
+    description: 'Greeting to welcome the user to the app',
+  },
+});
+
+class Foo extends React.Component {
+  render() {
+    return (
+      <React.Fragment>
+        <FormattedMessage
+          id="Foo.hello1"
+          defaultMessage='Hello, {name}!'
+          description='Greeting to welcome the user to the app'
+        />
+        <FormattedMessage
+          id="Foo.hello2"
+          defaultMessage='Hello, {name}!'
+          description='Greeting to welcome the user to the app'
+        />
+      </React.Fragment>
+    );
+  }
+}
+
+const Component = () => (
+  <FormattedHTMLMessage
+    id="FormattedHTMLMessage.hello"
+    defaultMessage='<div>Hello, {name}!</div>'
+    description='Greeting to welcome the user to the app'
+  />
+)
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import { defineMessages, FormattedMessage, FormattedHTMLMessage } from "react-intl";
+import * as React from 'react';
+const messages = defineMessages({
+  'Component.greet': {
+    id: 'defineMessages.greet',
+    defaultMessage: 'Hello, {name}!',
+    description: 'Greeting to welcome the user to the app'
+  }
+});
+
+class Foo extends React.Component {
+  render() {
+    return <React.Fragment>
+        <FormattedMessage id="Foo.hello1" defaultMessage='Hello, {name}!' description='Greeting to welcome the user to the app' />
+        <FormattedMessage id="Foo.hello2" defaultMessage='Hello, {name}!' description='Greeting to welcome the user to the app' />
+      </React.Fragment>;
+  }
+
+}
+
+const Component = () => <FormattedHTMLMessage id="FormattedHTMLMessage.hello" defaultMessage='<div>Hello, {name}!</div>' description='Greeting to welcome the user to the app' />;
+
+[{
+  "id": "defineMessages.greet",
+  "defaultMessage": "Hello, {name}!",
+  "description": "Greeting to welcome the user to the app"
+}, {
+  "id": "Foo.hello1",
+  "defaultMessage": "Hello, {name}!",
+  "description": "Greeting to welcome the user to the app"
+}, {
+  "id": "Foo.hello2",
+  "defaultMessage": "Hello, {name}!",
+  "description": "Greeting to welcome the user to the app"
+}, {
+  "id": "FormattedHTMLMessage.hello",
+  "defaultMessage": "<div>Hello, {name}!</div>",
+  "description": "Greeting to welcome the user to the app"
+}]
+
+`;
+
+exports[`macros [defineMessages] callee alias: [defineMessages] callee alias 1`] = `
 
 import { injectIntl } from 'react-intl';
 import { defineMessages as def } from 'react-intl.macro';
@@ -34,7 +288,7 @@ export default messages;
 
 `;
 
-exports[`macros it should only import react-intl once: it should only import react-intl once 1`] = `
+exports[`macros [defineMessages] it should only import react-intl once: [defineMessages] it should only import react-intl once 1`] = `
 
 import { injectIntl } from 'react-intl';
 import { defineMessages } from 'react-intl.macro';
@@ -68,7 +322,7 @@ export default messages;
 
 `;
 
-exports[`macros one X one: one X one 1`] = `
+exports[`macros [defineMessages] one X one: [defineMessages] one X one 1`] = `
 
 import { defineMessages } from 'react-intl.macro';
 
@@ -101,7 +355,7 @@ export default messages;
 
 `;
 
-exports[`macros one X two: one X two 1`] = `
+exports[`macros [defineMessages] one X two: [defineMessages] one X two 1`] = `
 
 import { defineMessages } from 'react-intl.macro';
 
@@ -148,7 +402,7 @@ export default messages;
 
 `;
 
-exports[`macros two X one: two X one 1`] = `
+exports[`macros [defineMessages] two X one: [defineMessages] two X one 1`] = `
 
 import { defineMessages } from 'react-intl.macro';
 

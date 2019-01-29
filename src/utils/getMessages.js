@@ -1,21 +1,13 @@
 // @flow
-import type { BabelPath } from 'babel-flow-types';
+import { type BabelPath } from 'babel-flow-types';
+import { type Message } from './type.flow';
+import { objectExpressionToObject } from './ast-helper';
 
-export default function getMessages(referencePath: BabelPath) {
-  const messagesObjectProperties = referencePath.parentPath
-    .get('arguments')[0]
-    .get('properties');
-  const messages = messagesObjectProperties.map(property => {
-    const message = property.node.value.properties.reduce(
-      (acc, p) => ({
-        ...acc,
-        [p.key.name]: p.value.value,
-      }),
-      {},
-    );
-
-    return message;
-  });
+export default function getMessages(referencePath: BabelPath): Array<Message> {
+  const properties = referencePath.parentPath.get('arguments.0.properties');
+  const messages = properties
+    .map(property => property.get('value'))
+    .map(objectExpressionToObject);
 
   return messages;
 }

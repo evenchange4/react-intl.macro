@@ -8,9 +8,13 @@ import {
   type BabelPluginPass,
   type BabelPath,
 } from 'babel-flow-types';
-import { importReactIntl, writeFileSync, getMessages } from './utils/index';
 // import printAST from 'ast-pretty-print';
-// console.log(printAST(referencePath.parentPath));
+import {
+  importReactIntl,
+  writeFileSync,
+  getMessages,
+  getJSXMessage,
+} from './utils/index';
 
 function reactIntlMacro({
   references,
@@ -22,20 +26,42 @@ function reactIntlMacro({
   },
   babel: { types: t },
 }: {
-  references: { defineMessages: Array<BabelPath> },
+  references: {
+    defineMessages: Array<BabelPath>,
+    FormattedMessage: Array<BabelPath>,
+    FormattedHTMLMessage: Array<BabelPath>,
+  },
   state: BabelPluginPass,
   babel: Babel,
 }): void {
-  const { defineMessages = [] } = references;
+  const {
+    defineMessages = [],
+    FormattedMessage = [],
+    FormattedHTMLMessage = [],
+  } = references;
   const { MESSAGE_DIR } = process.env;
 
   // Note: add react-intl on the top of file if it have not been imported.
-  const calleeName = defineMessages[0].parentPath.get('callee').node.name;
-  importReactIntl(state, t, calleeName);
+  if (!R.isEmpty(defineMessages)) {
+    const calleeName = defineMessages[0].parentPath.get('callee').node.name;
+    importReactIntl(state, t, 'defineMessages', calleeName);
+  }
+  if (!R.isEmpty(FormattedMessage)) {
+    const calleeName = FormattedMessage[0].parentPath.get('name').node.name;
+    importReactIntl(state, t, 'FormattedMessage', calleeName);
+  }
+  if (!R.isEmpty(FormattedHTMLMessage)) {
+    const calleeName = FormattedHTMLMessage[0].parentPath.get('name').node.name;
+    importReactIntl(state, t, 'FormattedHTMLMessage', calleeName);
+  }
 
   // Note: Output side-effect
   if (MESSAGE_DIR) {
-    const result = defineMessages.map(getMessages);
+    const messages = [
+      ...(R.unnest: any)(defineMessages.map(getMessages)),
+      ...FormattedMessage.map(getJSXMessage),
+      ...FormattedHTMLMessage.map(getJSXMessage),
+    ];
     const sourceRelativedDir = path.relative(process.cwd(), filename);
     const inputFilename = filename;
     const outputFilename = path
@@ -48,13 +74,8 @@ function reactIntlMacro({
         outputFilename,
       )}`,
     );
-    writeFileSync(
-      {
-        filename: outputFilename,
-        data: R.flatten(result),
-      },
-      state,
-    );
+
+    writeFileSync(outputFilename, messages, state);
   }
 }
 

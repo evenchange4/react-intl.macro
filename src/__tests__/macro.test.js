@@ -17,9 +17,10 @@ pluginTester({
   snapshot: true,
   babelOptions: {
     filename: __filename,
+    parserOpts: { plugins: ['jsx'] },
   },
   tests: {
-    'one X one': {
+    '[defineMessages] one X one': {
       error: false,
       code: `
         import { defineMessages } from '../macro';
@@ -35,7 +36,7 @@ pluginTester({
         export default messages;
       `,
     },
-    'one X two': {
+    '[defineMessages] one X two': {
       error: false,
       code: `
         import { defineMessages } from '../macro';
@@ -56,7 +57,7 @@ pluginTester({
         export default messages;
       `,
     },
-    'two X one': {
+    '[defineMessages] two X one': {
       error: false,
       code: `
         import { defineMessages } from '../macro';
@@ -78,7 +79,7 @@ pluginTester({
         });
       `,
     },
-    'it should only import react-intl once': {
+    '[defineMessages] it should only import react-intl once': {
       error: false,
       code: `
         import { injectIntl } from 'react-intl';
@@ -95,7 +96,7 @@ pluginTester({
         export default messages;
       `,
     },
-    'callee alias': {
+    '[defineMessages] callee alias': {
       error: false,
       code: `
         import { injectIntl } from 'react-intl';
@@ -110,6 +111,139 @@ pluginTester({
         });
 
         export default messages;
+      `,
+    },
+    '[FormattedMessage] one X one': {
+      error: false,
+      code: `
+        import * as React from 'react';
+        import { FormattedMessage } from '../macro';
+
+        export default class Foo extends React.Component {
+          render() {
+            return (
+              <FormattedMessage
+                id="Foo.hello"
+                defaultMessage='Hello, {name}!'
+                description='Greeting to welcome the user to the app'
+              />
+            );
+          }
+        }
+      `,
+    },
+    '[FormattedMessage] one X two': {
+      error: false,
+      code: `
+        import * as React from 'react';
+        import { FormattedMessage } from '../macro';
+
+        export default class Foo extends React.Component {
+          render() {
+            return (
+              <React.Fragment>
+                <FormattedMessage
+                  id="Foo.hello1"
+                  defaultMessage='Hello, {name}!'
+                  description='Greeting to welcome the user to the app'
+                />
+                <FormattedMessage
+                  id="Foo.hello2"
+                  defaultMessage='Hello, {name}!'
+                  description='Greeting to welcome the user to the app'
+                />
+              </React.Fragment>
+            );
+          }
+        }
+      `,
+    },
+    '[FormattedMessage] two X one': {
+      error: false,
+      code: `
+        import * as React from 'react';
+        import { FormattedMessage } from '../macro';
+
+        class Foo extends React.Component {
+          render() {
+            return (
+              <FormattedMessage
+                id="Foo.hello"
+                defaultMessage='Hello, {name}!'
+                description='Greeting to welcome the user to the app'
+              />
+            );
+          }
+        }
+
+        const Component = () => (
+          <FormattedMessage
+            id="Component.hello"
+            defaultMessage='Hello, {name}!'
+            description='Greeting to welcome the user to the app'
+          />
+        )
+      `,
+    },
+    '[FormattedHTMLMessage]': {
+      error: false,
+      code: `
+        import * as React from 'react';
+        import { FormattedHTMLMessage } from '../macro';
+
+        export default class Foo extends React.Component {
+          render() {
+            return (
+              <FormattedHTMLMessage
+                id="FormattedHTMLMessage.hello"
+                defaultMessage='<div>Hello, {name}!</div>'
+                description='Greeting to welcome the user to the app'
+              />
+            );
+          }
+        }
+      `,
+    },
+    '[defineMessages, FormattedMessage, FormattedHTMLMessage]': {
+      error: false,
+      code: `
+        import * as React from 'react';
+        import { defineMessages, FormattedMessage, FormattedHTMLMessage } from '../macro';
+
+        const messages = defineMessages({
+          'Component.greet': {
+            id: 'defineMessages.greet',
+            defaultMessage: 'Hello, {name}!',
+            description: 'Greeting to welcome the user to the app',
+          },
+        });
+
+        class Foo extends React.Component {
+          render() {
+            return (
+              <React.Fragment>
+                <FormattedMessage
+                  id="Foo.hello1"
+                  defaultMessage='Hello, {name}!'
+                  description='Greeting to welcome the user to the app'
+                />
+                <FormattedMessage
+                  id="Foo.hello2"
+                  defaultMessage='Hello, {name}!'
+                  description='Greeting to welcome the user to the app'
+                />
+              </React.Fragment>
+            );
+          }
+        }
+
+        const Component = () => (
+          <FormattedHTMLMessage
+            id="FormattedHTMLMessage.hello"
+            defaultMessage='<div>Hello, {name}!</div>'
+            description='Greeting to welcome the user to the app'
+          />
+        )
       `,
     },
   },
