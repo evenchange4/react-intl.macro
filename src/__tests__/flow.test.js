@@ -4,7 +4,7 @@ import {
   defineMessages,
   FormattedMessage,
   FormattedHTMLMessage,
-} from './index';
+} from '../index';
 
 export const messages = defineMessages({
   'Component.greet': {
