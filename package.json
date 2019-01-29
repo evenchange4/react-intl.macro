@@ -1,6 +1,6 @@
 {
   "name": "react-intl.macro",
-  "version": "0.2.4",
+  "version": "0.3.0",
   "main": "lib/index.js",
   "module": "es/index.js",
   "sideEffects": false,
