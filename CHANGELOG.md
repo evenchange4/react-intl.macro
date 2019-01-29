@@ -1,5 +1,11 @@
 ## Unreleased (2019-01-29)
 
+## <small>0.3.1 (2019-01-29)</small>
+
+- 0.3.1 ([294133a](https://github.com/evenchange4/react-intl.macro/commit/294133a))
+- feat(config): add `verbose` config to disable log messages (#37) ([445ab39](https://github.com/evenchange4/react-intl.macro/commit/445ab39)), closes [#37](https://github.com/evenchange4/react-intl.macro/issues/37)
+- docs(CHANGELOG): release 0.3.0 ([c987403](https://github.com/evenchange4/react-intl.macro/commit/c987403))
+
 ## 0.3.0 (2019-01-29)
 
 - 0.3.0 ([5efd726](https://github.com/evenchange4/react-intl.macro/commit/5efd726))
