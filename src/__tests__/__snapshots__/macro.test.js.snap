@@ -35,6 +35,49 @@ export default class Foo extends React.Component {
 
 `;
 
+exports[`macros [FormattedMessage] multiline with TemplateLiteral issue#38: [FormattedMessage] multiline with TemplateLiteral issue#38 1`] = `
+
+import * as React from 'react';
+import { FormattedMessage } from 'react-intl.macro';
+
+export default class Foo extends React.Component {
+  render() {
+    return (
+      <FormattedMessage
+        id="Foo.hello"
+        defaultMessage={\`Hello {name}, you have {unreadCount, number} {unreadCount, plural,
+          one {message}
+          other {messages}
+        }\`}
+        values={{name: <b>{name}</b>, unreadCount}}
+      />
+    );
+  }
+}
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import { FormattedMessage } from "react-intl";
+import * as React from 'react';
+export default class Foo extends React.Component {
+  render() {
+    return <FormattedMessage id="Foo.hello" defaultMessage={\`Hello {name}, you have {unreadCount, number} {unreadCount, plural,
+          one {message}
+          other {messages}
+        }\`} values={{
+      name: <b>{name}</b>,
+      unreadCount
+    }} />;
+  }
+
+}
+[{
+  "id": "Foo.hello",
+  "defaultMessage": "Hello {name}, you have {unreadCount, number} {unreadCount, plural,\\n          one {message}\\n          other {messages}\\n        }"
+}]
+
+`;
+
 exports[`macros [FormattedMessage] one X one: [FormattedMessage] one X one 1`] = `
 
 import * as React from 'react';
@@ -317,6 +360,45 @@ export default messages;
 [{
   "id": "Component.greet",
   "defaultMessage": "Hello, {name}!",
+  "description": "Greeting to welcome the user to the app"
+}]
+
+`;
+
+exports[`macros [defineMessages] multiline with TemplateLiteral issue#38: [defineMessages] multiline with TemplateLiteral issue#38 1`] = `
+
+import { defineMessages } from 'react-intl.macro';
+
+const messages = defineMessages({
+  'Component.greet': {
+    id: 'Component.greet',
+    defaultMessage: \`Hello {name}, you have {unreadCount, number} {unreadCount, plural,
+      one {message}
+      other {messages}
+    }\`,
+    description: \`Greeting to welcome the user to the app\`,
+  },
+});
+
+export default messages;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import { defineMessages } from "react-intl";
+const messages = defineMessages({
+  'Component.greet': {
+    id: 'Component.greet',
+    defaultMessage: \`Hello {name}, you have {unreadCount, number} {unreadCount, plural,
+      one {message}
+      other {messages}
+    }\`,
+    description: \`Greeting to welcome the user to the app\`
+  }
+});
+export default messages;
+[{
+  "id": "Component.greet",
+  "defaultMessage": "Hello {name}, you have {unreadCount, number} {unreadCount, plural,\\n      one {message}\\n      other {messages}\\n    }",
   "description": "Greeting to welcome the user to the app"
 }]
 
