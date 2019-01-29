@@ -246,5 +246,46 @@ pluginTester({
         )
       `,
     },
+    '[FormattedMessage] multiline with TemplateLiteral issue#38': {
+      error: false,
+      code: `
+        import * as React from 'react';
+        import { FormattedMessage } from '../macro';
+
+        export default class Foo extends React.Component {
+          render() {
+            return (
+              <FormattedMessage
+                id="Foo.hello"
+                defaultMessage={\`Hello {name}, you have {unreadCount, number} {unreadCount, plural,
+                  one {message}
+                  other {messages}
+                }\`}
+                values={{name: <b>{name}</b>, unreadCount}}
+              />
+            );
+          }
+        }
+      `,
+    },
+    '[defineMessages] multiline with TemplateLiteral issue#38': {
+      error: false,
+      code: `
+        import { defineMessages } from '../macro';
+
+        const messages = defineMessages({
+          'Component.greet': {
+            id: 'Component.greet',
+            defaultMessage: \`Hello {name}, you have {unreadCount, number} {unreadCount, plural,
+              one {message}
+              other {messages}
+            }\`,
+            description: \`Greeting to welcome the user to the app\`,
+          },
+        });
+
+        export default messages;
+      `,
+    },
   },
 });
