@@ -10,6 +10,7 @@ import {
 } from 'babel-flow-types';
 // import printAST from 'ast-pretty-print';
 import {
+  defaultConfig,
   importReactIntl,
   writeFileSync,
   getMessages,
@@ -25,6 +26,7 @@ function reactIntlMacro({
     },
   },
   babel: { types: t },
+  config: { verbose } = defaultConfig,
 }: {
   references: {
     defineMessages: Array<BabelPath>,
@@ -33,6 +35,7 @@ function reactIntlMacro({
   },
   state: BabelPluginPass,
   babel: Babel,
+  config: { verbose: boolean },
 }): void {
   const {
     defineMessages = [],
@@ -62,21 +65,24 @@ function reactIntlMacro({
       ...FormattedMessage.map(getJSXMessage),
       ...FormattedHTMLMessage.map(getJSXMessage),
     ];
+
     const sourceRelativedDir = path.relative(process.cwd(), filename);
-    const inputFilename = filename;
     const outputFilename = path
       .join(process.cwd(), MESSAGE_DIR, sourceRelativedDir)
       .replace(/(js|jsx)$/g, 'json');
 
-    console.log(
-      `${path.relative(process.cwd(), inputFilename)} -> ${path.relative(
-        process.cwd(),
-        outputFilename,
-      )}`,
-    );
+    if (verbose) {
+      const inputFilename = filename;
+      console.log(
+        `${path.relative(process.cwd(), inputFilename)} -> ${path.relative(
+          process.cwd(),
+          outputFilename,
+        )}`,
+      );
+    }
 
     writeFileSync(outputFilename, messages, state);
   }
 }
 
-export default createMacro(reactIntlMacro);
+export default createMacro(reactIntlMacro, { configName: 'react-intl' });

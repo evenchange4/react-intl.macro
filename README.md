@@ -111,6 +111,23 @@ const Component = () => (
 
 - `MESSAGE_DIR: string`: The directory of output json files.
 
+## Config
+
+Use [cosmiconfig](https://www.npmjs.com/package/cosmiconfig) to set the `babel-plugin-macros` configuration: https://github.com/kentcdodds/babel-plugin-macros/blob/master/other/docs/user.md#config-experimental
+
+### `verbose`: To disable the log messages
+
+default: `true`
+
+```js
+// babel-plugin-macros.config.js
+module.exports = {
+  'react-intl': {
+    verbose: false,
+  },
+};
+```
+
 ## Alternative
 
 - https://github.com/yahoo/babel-plugin-react-intl
