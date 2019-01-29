@@ -1,5 +1,11 @@
 ## Unreleased (2019-01-29)
 
+## <small>0.3.2 (2019-01-29)</small>
+
+- 0.3.2 ([5dc7a30](https://github.com/evenchange4/react-intl.macro/commit/5dc7a30))
+- fix(TemplateLiteral): add multiline support with TemplateLiteral (#40) ([6be7010](https://github.com/evenchange4/react-intl.macro/commit/6be7010)), closes [#40](https://github.com/evenchange4/react-intl.macro/issues/40)
+- docs(CHANGELOG): release 0.3.1 ([6d069be](https://github.com/evenchange4/react-intl.macro/commit/6d069be))
+
 ## <small>0.3.1 (2019-01-29)</small>
 
 - 0.3.1 ([294133a](https://github.com/evenchange4/react-intl.macro/commit/294133a))
