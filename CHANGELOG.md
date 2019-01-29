@@ -1,4 +1,13 @@
-## Unreleased (2019-01-25)
+## Unreleased (2019-01-29)
+
+## 0.3.0 (2019-01-29)
+
+- 0.3.0 ([5efd726](https://github.com/evenchange4/react-intl.macro/commit/5efd726))
+- chore(deps): pin dependency react to 16.7.0 (#36) ([08eaaa9](https://github.com/evenchange4/react-intl.macro/commit/08eaaa9)), closes [#36](https://github.com/evenchange4/react-intl.macro/issues/36)
+- chore(deps): update dependency jest to v24.0.0 (#30) ([9e07b05](https://github.com/evenchange4/react-intl.macro/commit/9e07b05)), closes [#30](https://github.com/evenchange4/react-intl.macro/issues/30)
+- chore(deps): update dependency lint-staged to v8.1.1 (#32) ([7379d56](https://github.com/evenchange4/react-intl.macro/commit/7379d56)), closes [#32](https://github.com/evenchange4/react-intl.macro/issues/32)
+- feat(Components): add support for FormattedMessage and FormattedHTMLMessage components (#35) ([70abbeb](https://github.com/evenchange4/react-intl.macro/commit/70abbeb)), closes [#35](https://github.com/evenchange4/react-intl.macro/issues/35) [#31](https://github.com/evenchange4/react-intl.macro/issues/31)
+- docs(CHANGELOG): release 0.2.4 ([923d203](https://github.com/evenchange4/react-intl.macro/commit/923d203))
 
 ## <small>0.2.4 (2019-01-25)</small>
 
