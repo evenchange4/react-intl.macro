@@ -1,5 +1,11 @@
 ## Unreleased (2019-01-29)
 
+## <small>0.3.3 (2019-01-29)</small>
+
+- 0.3.3 ([07909cf](https://github.com/evenchange4/react-intl.macro/commit/07909cf))
+- fix(TemplateLiteral): use printICUMessage from babel-plugin-react-intl ([45da094](https://github.com/evenchange4/react-intl.macro/commit/45da094))
+- docs(CHANGELOG): release 0.3.2 ([fbb13b4](https://github.com/evenchange4/react-intl.macro/commit/fbb13b4))
+
 ## <small>0.3.2 (2019-01-29)</small>
 
 - 0.3.2 ([5dc7a30](https://github.com/evenchange4/react-intl.macro/commit/5dc7a30))
