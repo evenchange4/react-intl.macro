@@ -1,20 +1,12 @@
 // @flow
 import * as fs from 'fs-extra';
 import path from 'path';
+import { type MessageDescriptor } from './type.flow';
 
 export default function writeFileSync(
-  {
-    filename,
-    data,
-  }: {
-    filename: string,
-    data: Array<{
-      id: string,
-      defaultMessage: string,
-      description?: string,
-    }>,
-  },
-  // state for test snapshot only
+  filename: string,
+  data: Array<MessageDescriptor>,
+  // Note: state for test snapshot only
   state: any, // eslint-disable-line
 ) {
   fs.ensureDirSync(path.dirname(filename));
