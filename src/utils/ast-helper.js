@@ -1,5 +1,6 @@
 // @flow
 import { type BabelPath } from 'babel-flow-types';
+import printICUMessage from 'babel-plugin-react-intl/lib/print-icu-message';
 // import printAST from 'ast-pretty-print';
 
 export function objectExpressionToObject(
@@ -11,7 +12,7 @@ export function objectExpressionToObject(
 
     // Note: multiline with templateLiteral
     if (property.get('value').type === 'TemplateLiteral') {
-      value = property.get('value').node.quasis[0].value.raw;
+      value = printICUMessage(property.get('value').node.quasis[0].value.raw);
     }
 
     return { ...acc, [key]: value };
@@ -27,7 +28,9 @@ export function jsxAttributesToObject(
 
     // Note: multiline with templateLiteral
     if (attribute.get('value.expression').type === 'TemplateLiteral') {
-      value = attribute.get('value.expression').node.quasis[0].value.raw;
+      value = printICUMessage(
+        attribute.get('value.expression').node.quasis[0].value.raw,
+      );
     }
 
     return { ...acc, [name]: value };
