@@ -1,12 +1,12 @@
 // @flow
 
-export type Message = {
+export type MessageDescriptor = {
   id: string | number,
-  defaultMessage:
+  defaultMessage?:
     | string
     | {
         text: string,
         metadata: string,
       },
-  description: string,
+  description?: string,
 };
