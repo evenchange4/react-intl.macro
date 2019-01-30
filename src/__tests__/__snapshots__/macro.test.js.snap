@@ -123,12 +123,12 @@ export default class Foo extends React.Component {
     return (
       <React.Fragment>
         <FormattedMessage
-          id="Foo.hello1"
+          id={1}
           defaultMessage='Hello, {name}!'
           description='Greeting to welcome the user to the app'
         />
         <FormattedMessage
-          id="Foo.hello2"
+          id={2}
           defaultMessage='Hello, {name}!'
           description='Greeting to welcome the user to the app'
         />
@@ -144,20 +144,65 @@ import * as React from 'react';
 export default class Foo extends React.Component {
   render() {
     return <React.Fragment>
-        <FormattedMessage id="Foo.hello1" defaultMessage='Hello, {name}!' description='Greeting to welcome the user to the app' />
-        <FormattedMessage id="Foo.hello2" defaultMessage='Hello, {name}!' description='Greeting to welcome the user to the app' />
+        <FormattedMessage id={1} defaultMessage='Hello, {name}!' description='Greeting to welcome the user to the app' />
+        <FormattedMessage id={2} defaultMessage='Hello, {name}!' description='Greeting to welcome the user to the app' />
       </React.Fragment>;
   }
 
 }
 [{
-  "id": "Foo.hello1",
+  "id": 1,
   "defaultMessage": "Hello, {name}!",
   "description": "Greeting to welcome the user to the app"
 }, {
-  "id": "Foo.hello2",
+  "id": 2,
   "defaultMessage": "Hello, {name}!",
   "description": "Greeting to welcome the user to the app"
+}]
+
+`;
+
+exports[`macros [FormattedMessage] should evaluate with expression issue#38: [FormattedMessage] should evaluate with expression issue#38 1`] = `
+
+import * as React from 'react';
+import { FormattedMessage } from 'react-intl.macro';
+
+export default class Foo extends React.Component {
+  render() {
+    return (
+      <FormattedMessage
+        id={0 + 1}
+        defaultMessage={\`\${1 + 2} Hello {name}, you have {unreadCount, number} {unreadCount, plural,
+          one {message}
+          other {messages}
+        }\`}
+        description={\`description \${1+ 1}\`}
+        values={{name: <b>{name}</b>, unreadCount}}
+      />
+    );
+  }
+}
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import { FormattedMessage } from "react-intl";
+import * as React from 'react';
+export default class Foo extends React.Component {
+  render() {
+    return <FormattedMessage id={0 + 1} defaultMessage={\`\${1 + 2} Hello {name}, you have {unreadCount, number} {unreadCount, plural,
+          one {message}
+          other {messages}
+        }\`} description={\`description \${1 + 1}\`} values={{
+      name: <b>{name}</b>,
+      unreadCount
+    }} />;
+  }
+
+}
+[{
+  "id": 1,
+  "defaultMessage": "3 Hello {name}, you have {unreadCount, number} {unreadCount, plural, one {message} other {messages}}",
+  "description": "description 2"
 }]
 
 `;
@@ -443,12 +488,12 @@ import { defineMessages } from 'react-intl.macro';
 
 const messages = defineMessages({
   'Component.greet': {
-    id: 'Component.greet',
+    id: 1,
     defaultMessage: 'Hello, {name}!',
     description: 'Greeting to welcome the user to the app',
   },
   'Component.greet2': {
-    id: 'Component.greet2',
+    id: 2,
     defaultMessage: 'Hello, {name}!',
     description: 'Greeting to welcome the user to the app',
   },
@@ -461,25 +506,64 @@ export default messages;
 import { defineMessages } from "react-intl";
 const messages = defineMessages({
   'Component.greet': {
-    id: 'Component.greet',
+    id: 1,
     defaultMessage: 'Hello, {name}!',
     description: 'Greeting to welcome the user to the app'
   },
   'Component.greet2': {
-    id: 'Component.greet2',
+    id: 2,
     defaultMessage: 'Hello, {name}!',
     description: 'Greeting to welcome the user to the app'
   }
 });
 export default messages;
 [{
-  "id": "Component.greet",
+  "id": 1,
   "defaultMessage": "Hello, {name}!",
   "description": "Greeting to welcome the user to the app"
 }, {
-  "id": "Component.greet2",
+  "id": 2,
   "defaultMessage": "Hello, {name}!",
   "description": "Greeting to welcome the user to the app"
+}]
+
+`;
+
+exports[`macros [defineMessages] should evaluate with expression issue#38: [defineMessages] should evaluate with expression issue#38 1`] = `
+
+import { defineMessages } from 'react-intl.macro';
+
+const messages = defineMessages({
+  'Component.greet': {
+    id: 0 + 1,
+    defaultMessage: \`\${1 + 2} Hello {name}, you have {unreadCount, number} {unreadCount, plural,
+      one {message}
+      other {messages}
+    }\`,
+    description: \`Greeting to welcome the user to the app \${1+ 1}\`,
+  },
+});
+
+export default messages;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import { defineMessages } from "react-intl";
+const messages = defineMessages({
+  'Component.greet': {
+    id: 0 + 1,
+    defaultMessage: \`\${1 + 2} Hello {name}, you have {unreadCount, number} {unreadCount, plural,
+      one {message}
+      other {messages}
+    }\`,
+    description: \`Greeting to welcome the user to the app \${1 + 1}\`
+  }
+});
+export default messages;
+[{
+  "id": 1,
+  "defaultMessage": "3 Hello {name}, you have {unreadCount, number} {unreadCount, plural, one {message} other {messages}}",
+  "description": "Greeting to welcome the user to the app 2"
 }]
 
 `;

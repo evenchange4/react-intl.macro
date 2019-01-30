@@ -1,8 +1,7 @@
 // @flow
 import { type BabelPluginPass, type Types } from 'babel-flow-types';
 import * as R from 'ramda';
-
-const REACT_INTL = 'react-intl';
+import { REACT_INTL } from './constants';
 
 export default function importReactIntl(
   state: BabelPluginPass,
