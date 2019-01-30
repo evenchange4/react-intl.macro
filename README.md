@@ -45,7 +45,8 @@ const messages = defineMessages({
 ```diff
 // Component.js
 import * as React from 'react';
--import { defineMessages, FormattedMessage, FormattedHTMLMessage } from 'react-intl';
+-import { injectIntl, defineMessages, FormattedMessage, FormattedHTMLMessage } from 'react-intl';
++import { injectIntl } from 'react-intl';
 +import { defineMessages, FormattedMessage, FormattedHTMLMessage } from 'react-intl.macro';
 
 const messages = defineMessages({
