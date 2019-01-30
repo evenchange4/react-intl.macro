@@ -1,4 +1,11 @@
-## Unreleased (2019-01-29)
+## Unreleased (2019-01-30)
+
+## <small>0.3.4 (2019-01-30)</small>
+
+- 0.3.4 ([ecb3f68](https://github.com/evenchange4/react-intl.macro/commit/ecb3f68))
+- docs(CHANGELOG): release 0.3.3 ([67af5ad](https://github.com/evenchange4/react-intl.macro/commit/67af5ad))
+- docs(README): add injectIntl example #39 ([44cdde6](https://github.com/evenchange4/react-intl.macro/commit/44cdde6)), closes [#39](https://github.com/evenchange4/react-intl.macro/issues/39)
+- fix(evaluate): should evaluate with expression #38 (#41) ([cb5bcce](https://github.com/evenchange4/react-intl.macro/commit/cb5bcce)), closes [#38](https://github.com/evenchange4/react-intl.macro/issues/38) [#41](https://github.com/evenchange4/react-intl.macro/issues/41)
 
 ## <small>0.3.3 (2019-01-29)</small>
 
