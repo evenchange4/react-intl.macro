@@ -10,7 +10,8 @@ import {
 } from 'babel-flow-types';
 // import printAST from 'ast-pretty-print';
 import {
-  defaultConfig,
+  DEFAULT_CONFIG,
+  REACT_INTL,
   importReactIntl,
   writeFileSync,
   getMessages,
@@ -26,7 +27,7 @@ function reactIntlMacro({
     },
   },
   babel: { types: t },
-  config: { verbose } = defaultConfig,
+  config: { verbose } = DEFAULT_CONFIG,
 }: {
   references: {
     defineMessages: Array<BabelPath>,
@@ -85,4 +86,4 @@ function reactIntlMacro({
   }
 }
 
-export default createMacro(reactIntlMacro, { configName: 'react-intl' });
+export default createMacro(reactIntlMacro, { configName: REACT_INTL });

@@ -43,12 +43,12 @@ pluginTester({
 
         const messages = defineMessages({
           'Component.greet': {
-            id: 'Component.greet',
+            id: 1,
             defaultMessage: 'Hello, {name}!',
             description: 'Greeting to welcome the user to the app',
           },
           'Component.greet2': {
-            id: 'Component.greet2',
+            id: 2,
             defaultMessage: 'Hello, {name}!',
             description: 'Greeting to welcome the user to the app',
           },
@@ -143,12 +143,12 @@ pluginTester({
             return (
               <React.Fragment>
                 <FormattedMessage
-                  id="Foo.hello1"
+                  id={1}
                   defaultMessage='Hello, {name}!'
                   description='Greeting to welcome the user to the app'
                 />
                 <FormattedMessage
-                  id="Foo.hello2"
+                  id={2}
                   defaultMessage='Hello, {name}!'
                   description='Greeting to welcome the user to the app'
                 />
@@ -268,6 +268,29 @@ pluginTester({
         }
       `,
     },
+    '[FormattedMessage] should evaluate with expression issue#38': {
+      error: false,
+      code: `
+        import * as React from 'react';
+        import { FormattedMessage } from '../macro';
+
+        export default class Foo extends React.Component {
+          render() {
+            return (
+              <FormattedMessage
+                id={0 + 1}
+                defaultMessage={\`\${1 + 2} Hello {name}, you have {unreadCount, number} {unreadCount, plural,
+                  one {message}
+                  other {messages}
+                }\`}
+                description={\`description \${1+ 1}\`}
+                values={{name: <b>{name}</b>, unreadCount}}
+              />
+            );
+          }
+        }
+      `,
+    },
     '[defineMessages] multiline with TemplateLiteral issue#38': {
       error: false,
       code: `
@@ -281,6 +304,25 @@ pluginTester({
               other {messages}
             }\`,
             description: \`Greeting to welcome the user to the app\`,
+          },
+        });
+
+        export default messages;
+      `,
+    },
+    '[defineMessages] should evaluate with expression issue#38': {
+      error: false,
+      code: `
+        import { defineMessages } from '../macro';
+
+        const messages = defineMessages({
+          'Component.greet': {
+            id: 0 + 1,
+            defaultMessage: \`\${1 + 2} Hello {name}, you have {unreadCount, number} {unreadCount, plural,
+              one {message}
+              other {messages}
+            }\`,
+            description: \`Greeting to welcome the user to the app \${1+ 1}\`,
           },
         });
 
