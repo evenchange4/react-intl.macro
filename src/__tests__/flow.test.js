@@ -14,6 +14,13 @@ export const messages = defineMessages({
   },
 });
 
+// $FlowFixMe `id` is missing
+export const messagesWithoutId = defineMessages({
+  'Component.greet': {
+    defaultMessage: 'Hello, {name}!',
+  },
+});
+
 export class Foo extends React.Component<any, any> {
   state = {};
 
@@ -27,6 +34,11 @@ export class Foo extends React.Component<any, any> {
         />
         <FormattedMessage
           id="Foo.hello2"
+          defaultMessage="Hello, {name}!"
+          description="Greeting to welcome the user to the app"
+        />
+        {/* $FlowFixMe `id` is missing */}
+        <FormattedMessage
           defaultMessage="Hello, {name}!"
           description="Greeting to welcome the user to the app"
         />
