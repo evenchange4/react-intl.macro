@@ -1,4 +1,11 @@
-## Unreleased (2019-01-30)
+## Unreleased (2019-02-11)
+
+## <small>0.3.5 (2019-02-11)</small>
+
+- 0.3.5 ([6be29de](https://github.com/evenchange4/react-intl.macro/commit/6be29de))
+- chore(deps): ncu update ([2d12dc6](https://github.com/evenchange4/react-intl.macro/commit/2d12dc6))
+- chore(deps): update dependency prettier to v1.16.2 (#42) ([f616e8f](https://github.com/evenchange4/react-intl.macro/commit/f616e8f)), closes [#42](https://github.com/evenchange4/react-intl.macro/issues/42)
+- docs(CHANGELOG): release 0.3.4 ([73ef87b](https://github.com/evenchange4/react-intl.macro/commit/73ef87b))
 
 ## <small>0.3.4 (2019-01-30)</small>
 
