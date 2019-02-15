@@ -40,7 +40,7 @@
     "jest": "24.1.0",
     "lint-staged": "8.1.4",
     "prettier": "1.16.4",
-    "react": "16.8.1"
+    "react": "16.8.2"
   },
   "jest": {
     "setupFilesAfterEnv": [
