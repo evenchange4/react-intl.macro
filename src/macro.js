@@ -70,7 +70,7 @@ function reactIntlMacro({
     const sourceRelativedDir = path.relative(process.cwd(), filename);
     const outputFilename = path
       .join(process.cwd(), MESSAGE_DIR, sourceRelativedDir)
-      .replace(/(js|jsx)$/g, 'json');
+      .replace(/(js|jsx|ts|tsx)$/g, 'json');
 
     if (verbose) {
       const inputFilename = filename;
