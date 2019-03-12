@@ -1,4 +1,22 @@
-## Unreleased (2019-02-11)
+## Unreleased (2019-03-12)
+
+## <small>0.3.6 (2019-03-12)</small>
+
+- 0.3.6 ([39ce87e](https://github.com/evenchange4/react-intl.macro/commit/39ce87e))
+- fix: Replace ts and tsx extensions with json in outputFilename (#69) ([9f6b2bf](https://github.com/evenchange4/react-intl.macro/commit/9f6b2bf)), closes [#69](https://github.com/evenchange4/react-intl.macro/issues/69) [#68](https://github.com/evenchange4/react-intl.macro/issues/68)
+- chore(deps): remove babel bridge (#57) ([858491b](https://github.com/evenchange4/react-intl.macro/commit/858491b)), closes [#57](https://github.com/evenchange4/react-intl.macro/issues/57)
+- chore(deps): update dependency codecov to v3.2.0 (#50) ([557ed36](https://github.com/evenchange4/react-intl.macro/commit/557ed36)), closes [#50](https://github.com/evenchange4/react-intl.macro/issues/50)
+- chore(deps): update dependency conventional-changelog-cli to v2.0.12 (#56) ([37d9933](https://github.com/evenchange4/react-intl.macro/commit/37d9933)), closes [#56](https://github.com/evenchange4/react-intl.macro/issues/56)
+- chore(deps): update dependency eslint to v5.14.0 (#58) ([8c09684](https://github.com/evenchange4/react-intl.macro/commit/8c09684)), closes [#58](https://github.com/evenchange4/react-intl.macro/issues/58)
+- chore(deps): update dependency eslint to v5.14.1 (#59) ([8d272de](https://github.com/evenchange4/react-intl.macro/commit/8d272de)), closes [#59](https://github.com/evenchange4/react-intl.macro/issues/59)
+- chore(deps): update dependency flow-bin to v0.93.0 (#51) ([f21bc77](https://github.com/evenchange4/react-intl.macro/commit/f21bc77)), closes [#51](https://github.com/evenchange4/react-intl.macro/issues/51)
+- chore(deps): update dependency hsu-scripts to v1.0.6 (#61) ([547256c](https://github.com/evenchange4/react-intl.macro/commit/547256c)), closes [#61](https://github.com/evenchange4/react-intl.macro/issues/61)
+- chore(deps): update dependency hsu-scripts to v1.0.7 (#62) ([1429926](https://github.com/evenchange4/react-intl.macro/commit/1429926)), closes [#62](https://github.com/evenchange4/react-intl.macro/issues/62)
+- chore(deps): update dependency lint-staged to v8.1.4 (#52) ([2fda809](https://github.com/evenchange4/react-intl.macro/commit/2fda809)), closes [#52](https://github.com/evenchange4/react-intl.macro/issues/52)
+- chore(deps): update dependency react to v16.8.2 (#53) ([b301e0b](https://github.com/evenchange4/react-intl.macro/commit/b301e0b)), closes [#53](https://github.com/evenchange4/react-intl.macro/issues/53)
+- chore(deps): update dependency react to v16.8.3 (#60) ([694da51](https://github.com/evenchange4/react-intl.macro/commit/694da51)), closes [#60](https://github.com/evenchange4/react-intl.macro/issues/60)
+- test(flow): add fail cases ([129544c](https://github.com/evenchange4/react-intl.macro/commit/129544c))
+- docs(CHANGELOG): release 0.3.5 ([bc5341e](https://github.com/evenchange4/react-intl.macro/commit/bc5341e))
 
 ## <small>0.3.5 (2019-02-11)</small>
 
