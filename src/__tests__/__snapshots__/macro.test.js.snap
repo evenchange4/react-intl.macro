@@ -73,7 +73,7 @@ export default class Foo extends React.Component {
 }
 [{
   "id": "Foo.hello",
-  "defaultMessage": "Hello {name}, you have {unreadCount, number} {unreadCount, plural, one {message} other {messages}}"
+  "defaultMessage": "Hello {name}, you have {unreadCount, number} {unreadCount,plural,one{message} other{messages}}"
 }]
 
 `;
@@ -201,7 +201,7 @@ export default class Foo extends React.Component {
 }
 [{
   "id": 1,
-  "defaultMessage": "3 Hello {name}, you have {unreadCount, number} {unreadCount, plural, one {message} other {messages}}",
+  "defaultMessage": "3 Hello {name}, you have {unreadCount, number} {unreadCount,plural,one{message} other{messages}}",
   "description": "description 2"
 }]
 
@@ -443,7 +443,7 @@ const messages = defineMessages({
 export default messages;
 [{
   "id": "Component.greet",
-  "defaultMessage": "Hello {name}, you have {unreadCount, number} {unreadCount, plural, one {message} other {messages}}",
+  "defaultMessage": "Hello {name}, you have {unreadCount, number} {unreadCount,plural,one{message} other{messages}}",
   "description": "Greeting to welcome the user to the app"
 }]
 
@@ -562,7 +562,7 @@ const messages = defineMessages({
 export default messages;
 [{
   "id": 1,
-  "defaultMessage": "3 Hello {name}, you have {unreadCount, number} {unreadCount, plural, one {message} other {messages}}",
+  "defaultMessage": "3 Hello {name}, you have {unreadCount, number} {unreadCount,plural,one{message} other{messages}}",
   "description": "Greeting to welcome the user to the app 2"
 }]
 

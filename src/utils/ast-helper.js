@@ -1,8 +1,11 @@
 // @flow
 import * as R from 'ramda';
 import { type BabelPath } from 'babel-flow-types';
-import printICUMessage from 'babel-plugin-react-intl/lib/print-icu-message';
+import { parse } from 'intl-messageformat-parser/dist';
+import { printAST } from 'intl-messageformat-parser/dist/printer';
 // import printAST from 'ast-pretty-print';
+
+const printICUMessage = (message: string) => printAST(parse(message));
 
 /**
  * Evaluate JSXExpression
