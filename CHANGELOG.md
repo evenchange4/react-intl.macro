@@ -1,4 +1,10 @@
-## Unreleased (2019-03-12)
+## Unreleased (2019-08-08)
+
+## <small>0.3.7 (2019-08-08)</small>
+
+- 0.3.7 ([5eb57af](https://github.com/evenchange4/react-intl.macro/commit/5eb57af))
+- fix(deps): ncu update & use node 12 & implement printICUMessage with intl-messageformat-parser inste ([a7fa611](https://github.com/evenchange4/react-intl.macro/commit/a7fa611))
+- docs(CHANGELOG): release 0.3.6 ([d333d00](https://github.com/evenchange4/react-intl.macro/commit/d333d00))
 
 ## <small>0.3.6 (2019-03-12)</small>
 
