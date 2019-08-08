@@ -138,8 +138,8 @@ module.exports = {
 
 ### Requirements
 
-- node >= 11.10.0
-- yarn >= 1.13.0
+- node >= 12.7.0
+- yarn >= 1.17.3
 
 ```sh
 $ yarn install --pure-lockfile
