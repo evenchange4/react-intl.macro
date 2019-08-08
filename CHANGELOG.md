@@ -1,4 +1,10 @@
-## Unreleased (2019-03-12)
+## Unreleased (2019-08-08)
+
+## 1.0.0 (2019-08-08)
+
+- 1.0.0 ([e0dbb7c](https://github.com/evenchange4/react-intl.macro/commit/e0dbb7c))
+- feat(deps): ncu update & use node 12 & [BREAKING] Upgrade to babel-plugin-react-intl@4 ([1222bcf](https://github.com/evenchange4/react-intl.macro/commit/1222bcf))
+- docs(CHANGELOG): release 0.3.6 ([d333d00](https://github.com/evenchange4/react-intl.macro/commit/d333d00))
 
 ## <small>0.3.6 (2019-03-12)</small>
 
