@@ -5943,10 +5943,10 @@ react@15.5.4:
     object-assign "^4.1.0"
     prop-types "^15.5.7"
 
-react@16.9.0-rc.0:
-  version "16.9.0-rc.0"
-  resolved "https://registry.yarnpkg.com/react/-/react-16.9.0-rc.0.tgz#fd5c4273383a0dd2b71d1d4e6ad464a392602be2"
-  integrity sha512-9J4dBd/6RITXvFY4eN4nyyqxsvO7UvGB8JFOn4wAQ1Y1sW8HL/xJ2nihRXGoIk53ewjaWZ0TfTczjPwIyqzTmA==
+react@16.14.0:
+  version "16.14.0"
+  resolved "https://registry.yarnpkg.com/react/-/react-16.14.0.tgz#94d776ddd0aaa37da3eda8fc5b6b18a4c9a3114d"
+  integrity sha512-0X2CImDkJGApiAlcf0ODKIneSwBPhqJawOa5wCtKbu7ZECrmS26NvtSILynQ66cgkT/RJ4LidJOc3bUESwmU8g==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
