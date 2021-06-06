@@ -28,7 +28,7 @@
   "devDependencies": {
     "ast-pretty-print": "2.0.1",
     "babel-literal-to-ast": "2.1.0",
-    "babel-plugin-tester": "6.4.0",
+    "babel-plugin-tester": "10.1.0",
     "codecov": "3.5.0",
     "conventional-changelog-cli": "2.0.23",
     "eslint": "6.1.0",
