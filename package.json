@@ -23,7 +23,7 @@
     "babel-plugin-macros": "^2.6.1",
     "fs-extra": "^8.1.0",
     "intl-messageformat-parser": "^3.0.3",
-    "ramda": "^0.26.1"
+    "ramda": "^0.28.0"
   },
   "devDependencies": {
     "ast-pretty-print": "2.0.1",
