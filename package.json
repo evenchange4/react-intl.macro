@@ -30,7 +30,7 @@
     "babel-literal-to-ast": "2.1.0",
     "babel-plugin-tester": "6.4.0",
     "codecov": "3.5.0",
-    "conventional-changelog-cli": "2.0.23",
+    "conventional-changelog-cli": "2.2.2",
     "eslint": "6.1.0",
     "flow-bin": "0.104.0",
     "graphql": "14.4.2",
