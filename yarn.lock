@@ -5843,7 +5843,7 @@ prompts@^2.0.1:
     kleur "^3.0.3"
     sisteransi "^1.0.3"
 
-prop-types@^15.5.7, prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@^15.5.7, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -5943,14 +5943,10 @@ react@15.5.4:
     object-assign "^4.1.0"
     prop-types "^15.5.7"
 
-react@16.9.0-rc.0:
-  version "16.9.0-rc.0"
-  resolved "https://registry.yarnpkg.com/react/-/react-16.9.0-rc.0.tgz#fd5c4273383a0dd2b71d1d4e6ad464a392602be2"
-  integrity sha512-9J4dBd/6RITXvFY4eN4nyyqxsvO7UvGB8JFOn4wAQ1Y1sW8HL/xJ2nihRXGoIk53ewjaWZ0TfTczjPwIyqzTmA==
-  dependencies:
-    loose-envify "^1.1.0"
-    object-assign "^4.1.1"
-    prop-types "^15.6.2"
+react@19.2.7:
+  version "19.2.7"
+  resolved "https://registry.yarnpkg.com/react/-/react-19.2.7.tgz#1f47a1bfc06f8ec885752c6f4af14369a9f8260b"
+  integrity sha512-HNe9WslTbXmFK8o8cmwgAeJFSBvt1bPdHCVKtaaV+WlAN36mpT4hcRpwbf3fY56ar2oIXzsBpOAiIRHAdY0OlQ==
 
 read-pkg-up@^1.0.1:
   version "1.0.1"
